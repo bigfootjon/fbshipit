@@ -15,6 +15,7 @@ apt-get install -y \
 
 locale-gen en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+echo "::set-env name=LC_ALL::en_US.UTF-8"
 
 git --version
 hg --version

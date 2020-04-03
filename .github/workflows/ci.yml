@@ -8,8 +8,6 @@ on:
 
 jobs:
   ci:
-    env:
-      LC_ALL: en_US.UTF-8
     strategy:
       # Do not cancel other versions if one version fails
       fail-fast: false
