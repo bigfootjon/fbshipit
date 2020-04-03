@@ -1,9 +1,9 @@
 #!/bin/bash
 set -ex
 
-cat tests/shipit/git-diffs/unicode.header
 
 add-apt-repository ppa:git-core/ppa
+cat tests/shipit/git-diffs/unicode.header
 # Must use a newer hg version than default on Xenial and lower
 UBUNTU_VERSION=$(lsb_release -r -s)
 if [ $(echo $UBUNTU_VERSION | cut -c1-2) -lt "18" ]; then
