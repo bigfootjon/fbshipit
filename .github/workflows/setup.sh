@@ -22,7 +22,7 @@ hhvm --version
 
 curl https://getcomposer.org/installer | php -- /dev/stdin --install-dir=/usr/local/bin --filename=composer
 
-rm -rf *
+rm -rf * .gitignore .github .hhconfig
 ls -la
 git clone https://github.com/bigfootjon/fbshipit.git .
 git checkout gh-actions
