@@ -15,6 +15,7 @@ apt-get install -y \
 
 locale-gen en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export HGENCODING=utf-8
 
 echo $LC_ALL
 echo $LANG
