@@ -1,6 +1,8 @@
 #!/bin/bash
 set -ex
 
+cat tests/shipit/git-diffs/unicode.header
+
 add-apt-repository ppa:git-core/ppa
 # Must use a newer hg version than default on Xenial and lower
 UBUNTU_VERSION=$(lsb_release -r -s)
@@ -15,8 +17,6 @@ apt-get install -y \
 
 locale-gen en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-locale
 
 git --version
 hg --version
