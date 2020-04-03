@@ -1,8 +1,6 @@
 #!/bin/bash
 set -ex
 
-file tests/shipit/git-diffs/unicode.header
-
 add-apt-repository ppa:git-core/ppa
 # Must use a newer hg version than default on Xenial and lower
 UBUNTU_VERSION=$(lsb_release -r -s)
@@ -25,3 +23,7 @@ hhvm --version
 curl https://getcomposer.org/installer | php -- /dev/stdin --install-dir=/usr/local/bin --filename=composer
 
 php /usr/local/bin/composer install
+
+rm -rf ./*
+git clone https://github.com/bigfootjon/fbshipit.git .
+git checkout gh-actions
